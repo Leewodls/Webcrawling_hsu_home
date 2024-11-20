@@ -1,0 +1,1 @@
+9999999999{"name": "re2", "version": "0.2.24", "summary": "Python wrapper for Google's RE2 using Cython", "platform": "", "requires_dist": null, "requires_python": null, "files": [], "_cache_version": "1.0.0"}

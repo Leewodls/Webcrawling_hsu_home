@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hanseo Home</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css">
+  <!--pico-->
+</head>
+<body>
+  
+  <main class="container">  <!-- 중앙으로 배치 -->
+    <hgroup>
+      <h1>"{{keyword}}"에 대한 검색 결과: </h1>
+    <a target="_blank" href = "/export?keyword={{keyword}}">Export to file</a> 
+    </hgroup>
+    <figure>  <!-- 가로로 스크롤 -->
+    <table role="grid">  <!-- 가로줄 생성 -->
+      <thead>
+        <tr>   <!-- table Row -->
+          <th>글번호</th>
+          <th>작성자</th>
+          <th>조회수</th>
+          <th>작성일</th>
+          <th>글제목</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+      {% for hanseo in hanseos %}
+        <tr>
+          <td>{{hanseo.num}}</td>
+          <td>{{hanseo.writer}}</td>
+          <td>{{hanseo.view}}</td>
+          <td>{{hanseo.day}}</td>
+          <td>{{hanseo.title}}</td>
+           
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </figure>
+  </main>
+</body>
+</html>
